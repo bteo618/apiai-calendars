@@ -1,0 +1,8 @@
+rootProject.name = 'libai-base'
+include ':libai'
+include ':libai-speech-gcp'
+include ':libai-web-servlet'
+
+project(':libai').projectDir = "$rootDir/libai" as File
+project(':libai-speech-gcp').projectDir = "$rootDir/speech/gcp" as File
+project(':libai-web-servlet').projectDir = "$rootDir/web/servlet" as File
