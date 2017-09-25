@@ -1,0 +1,5 @@
+
+description = 'Api.Ai Console Voice Client'
+dependencies {
+    compile group: 'ai.api.libai.speech', name: 'libai-speech-gcp', version:'1.6.12'
+}

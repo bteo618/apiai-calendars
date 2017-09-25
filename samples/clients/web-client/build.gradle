@@ -1,0 +1,8 @@
+
+apply plugin: 'war'
+
+description = 'Api.Ai Web Client Sample'
+dependencies {
+    compile group: 'ai.api.libai.web', name: 'libai-web-servlet', version:'1.6.12'
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.0.1'
+}

@@ -1,0 +1,8 @@
+rootProject.name = 'libai-samples'
+include ':text-client'
+include ':voice-client'
+include ':web-client'
+
+project(':text-client').projectDir = "$rootDir/text-client" as File
+project(':voice-client').projectDir = "$rootDir/voice-client" as File
+project(':web-client').projectDir = "$rootDir/web-client" as File

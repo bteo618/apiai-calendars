@@ -1,0 +1,25 @@
+
+description = 'Api.Ai Console Text Client'
+
+
+
+
+dependencies {
+    compile group: 'ai.api', name: 'libai', version:'1.6.12'
+    compile group: 'org.slf4j', name: 'slf4j-jdk14', version:'1.7.25'
+	
+}
+
+jar {
+  doFirst {
+    manifest {
+      if (!configurations.compile.isEmpty()) {
+        attributes(
+            'Class-Path': configurations.compile.collect{it.toURI().toString()}.join(' '),
+            'Main-Class': 'ai.api.examples.TextClientApplication')
+      }
+    }
+  }
+
+  into('lib') { from configurations.compile }
+}
